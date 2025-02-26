@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз на матч: Ноттингем Форест vs Арсенал</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(-45deg, #1a1a1a, #2d2d2d, #4a0000, #6a0a0a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .teams {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .team-logo {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        .team-logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .stats {
+            border-left: 3px solid #ff4655;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        .prediction {
+            background: linear-gradient(90deg, #ff4655, #cf102d);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(255,70,85,0.3);
+        }
+
+        .animated-text {
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            .team-logo {
+                width: 80px;
+                height: 80px;
+            }
+            .prediction {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Прогноз на матч АПЛ</h1>
+        
+        <div class="teams">
+            <img src="https://static.flashscore.com/res/image/data/GCLLkTzB-ImKwLTtA.png">
+            <img src="https://static.flashscore.com/res/image/data/pfchdCg5-vcNAdtF9.png">
+        </div>
+
+        <div class="content">
+            <p>Сегодня, 26 февраля 2025 года, в рамках 27-го тура АПЛ "Ноттингем Форест" принимает "Арсенал" на стадионе "Сити Граунд".</p>
+            
+            <div class="stats">
+                <p>"Арсенал" испытывает проблемы с реализацией моментов из-за многочисленных травм.<br> Это позволяет предположить, что команда будет оказывать постоянное давление на ворота соперника в поисках голевого момента.<br> В 13 из 15 последних матчей "Арсенал" победил по угловым с форой -1.5. "Ноттингем Форест" в 7 из 10 последних игр проиграл по угловым с форой -1.5.</p>
+            </div>
+        </div>
+
+        <div class="prediction">
+            <span class="animated-text">Победа Арсенала по угловым с форой -1.5</span><br>
+            <span style="font-size: 1.5em">Коэф. 1.87</span>
+        </div>
+    </div>
+</body>
+</html>
